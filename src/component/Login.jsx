@@ -12,6 +12,9 @@ function Login() {
         const res = await getUser(email, password)
         const user = res.data;
         console.log(user);
+        if(user.length > 0){
+            sessionStorage.setItem("userId",user[0].id)
+        }
         alert("login secc")
         navigate("/Contact");
 

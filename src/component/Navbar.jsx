@@ -8,7 +8,7 @@ function Navbar() {
             <Link to="/contact"> show contact</Link>
             <Link to="/Register">Register</Link>
             <Link to="/About">About</Link>
-            <Link to="/Show_count">Show_count</Link>
+            <Link to="/Show_cont">Show_count</Link>
         </div>
     );
 }
