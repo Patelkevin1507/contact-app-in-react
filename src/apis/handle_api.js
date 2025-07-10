@@ -44,7 +44,10 @@ export async function getUserbyuserId(userId) {
       const res = await axios.get(`${CONTACT_URL}?userId=${userId}`)
       return res;
    } catch (error) {
-
+      
       console.log("error : ", error);
    }
+}
+export async function deleteContact(id) {
+   await axios.delete(`${CONTACT_URL}/${id}`)
 }

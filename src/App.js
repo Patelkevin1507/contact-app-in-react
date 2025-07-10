@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Contact from "./component/Contact.jsx"
 import Register from "./component/Register.jsx"
@@ -10,6 +10,8 @@ import Showcont from './component/Show_cont.jsx';
 
 function App() {
   return (
+    <>
+    <BrowserRouter />
     <Router>
       <Navbar />
       <Routes>
@@ -20,6 +22,7 @@ function App() {
         <Route path="/Show_cont" element={<Showcont />}></Route>
       </Routes>
     </Router>
+    </>
   );
 }
 

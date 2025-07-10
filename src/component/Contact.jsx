@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { addContact } from "../apis/handle_api";
+// import { Phonenumber } from "../utilities/utilities";
 
 function Contact(){
     const [name,setName]=useState("");
@@ -10,6 +11,7 @@ function Contact(){
     const userId = sessionStorage.getItem("userId");
     addContact({name,number,userId});
     alert ("contact add successfully")
+    // Phonenumber(Number)
     }
     
     return(
