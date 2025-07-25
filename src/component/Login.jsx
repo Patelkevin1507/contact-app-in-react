@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router";
 import { getUser } from "../apis/handle_api";
 import { useNavigate } from "react-router-dom";
+import '../component/Login.css'
 // import { addUser } from "../apis/handle_api";
 function Login() {
     const [email, setEmail] = useState('')
@@ -27,8 +28,9 @@ function Login() {
     }
 
     return (
-        <>
-            <h2>login page</h2>
+        <div className="login-container">
+    <h2>Login Page</h2>
+        
             <form id="login_form" onSubmit={submitLogin}>
                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email" /><br />
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter password" /><br />
@@ -39,7 +41,8 @@ function Login() {
                 <NavLink to="/Register">Sign up?</NavLink>
 
             </form>
-        </>
+                </div>
+        
     )
 }
 export default Login;

@@ -5,7 +5,7 @@ import Register from "./component/Register.jsx"
 import About from "./component/About.jsx"
 import Navbar from './component/Navbar.jsx';
 import Login from './component/Login.jsx';
-import Showcont from './component/Show_cont.jsx';
+// import Showcont from './component/Show_cont.jsx';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Route path="/Register" element={<Register />}></Route>
         <Route path="/Contact" element={<Contact />}></Route>
         <Route path="/About" element={<About />}></Route>
-        <Route path="/Show_cont" element={<Showcont />}></Route>
+        {/* <Route path="/Show_cont" element={<Showcont />}></Route> */}
       </Routes>
     </Router>
     </>

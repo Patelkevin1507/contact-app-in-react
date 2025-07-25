@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { deleteContact, getUserbyuserId } from "../apis/handle_api";
+import '../component/Show_cont.css'
+
 // import { deleteUserbyuserId } from "../api/handle_api";
 
 function Showcont() {
@@ -12,7 +14,7 @@ function Showcont() {
         const user = res.data
         console.log(user);
 
-        
+
 
 
         setContact(res.data)
@@ -22,19 +24,13 @@ function Showcont() {
         handleContacts()
     }
 
-
-
-
-
-
-
     useEffect(() => {
         handleContacts()
     });
     return (
-        <>
-            <h2>all contact</h2>
-            <table border="2">
+        <div className="table-container">
+            <h2>All Contact</h2>
+            <table border="2" className="contact-table">
                 <thead>
                     <tr>
                         <th>contact name</th>
@@ -56,7 +52,7 @@ function Showcont() {
                 </tbody>
 
             </table>
-        </>
+        </div>
     )
 
 }
